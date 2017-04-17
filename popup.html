@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8"/>
+	<title>Music Downloader</title>
+	<meta name="robots" content="noindex"/>
+	<meta name="viewport" content="width=600, initial-scale=1">
+	<!-- Bootstrap core CSS -->
+	<link href="script/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/popup.css"/>
+
+	<!--<link rel="stylesheet" href="css/bar-ui.css" />
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            width: 460px;
+        }
+      .sm2-bar-ui {
+         font-size: 16px;
+        }
+        .sm2-bar-ui .sm2-main-controls,
+        .sm2-bar-ui .sm2-playlist-drawer {
+         background-color: #ffffff;
+        }
+        .sm2-bar-ui .sm2-inline-texture {
+         background: transparent;
+        }
+    </style>-->
+</head>
+
+<body>
+<div class="container_my">
+	<div class="player md-row">
+			<div class="md-progress-control md-inline-element">
+				<div class="md-table">
+					<div class="md-inline-time">0:00</div>
+					<div class="progress-wrap">
+						<div class="progress">
+							<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+								<!--<span class="sr-only">40% Complete (success)</span>-->
+
+							</div>
+							<div class="progress-ball">
+								<div class="icon-overlay"></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="md-inline-duration">0:00</div>
+
+				</div>
+			</div>
+			<div class="md-inline-element md-inline-btn ">
+				<div class="md-button-bd btn btn-default md-play-btn">
+					<a href="#play" class="md-inline-button play-pause">Play / pause</a>
+				</div>
+			</div>
+	</div>
+	<div class="searcher">
+		<ul class="nav nav-pills navbar-left  nav-stacked dropdown" role="tablist">
+			<li class="searchWords"><!--<a href="#">Regular link</a>-->
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="Enter song name" name="songName">
+					<span class="input-group-btn search-btn">
+						<button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+					</span>
+					</input>
+				</div>
+			</li>
+
+		</ul>
+
+		<!--<button class="form-control btn btn-info" id="b_play" >play</button>-->
+
+	</div>
+</div>
+
+
+<script type="text/javascript" src="script/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="script/soundmanager2-jsmin.js"></script>
+<script type="text/javascript" src="script/bootstrap/dist/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="script/163/NEJ.js"></script>
+<script type="text/javascript" src="script/163/util.js"></script>
+<script type="text/javascript" src="script/brix-crypto-js/crypto-js.js"></script>
+<script type="text/javascript" src="script/brix-crypto-js/aes.js"></script>
+<script type="text/javascript" src="script/163/CryptoJS.js"></script>
+<script type="text/javascript" src="script/163/crypto.js"></script>
+
+<script type="text/javascript" src="script/popup.js"></script>
+
+
+</body>
+</html>

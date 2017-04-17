@@ -1,0 +1,30 @@
+{
+    "manifest_version":2,
+    "name":"music downloader",
+    "description":"music downloader for user in mainland China",
+    "version":"1.0.1",
+    "permissions":[
+        "https://*/*",
+        "http://*/*",
+        "webRequest",
+        "webRequestBlocking",
+        "*://*.163.com/",
+        "downloads",
+        "storage"
+        ],
+    "browser_action":{
+        "default_icon":{
+            "20": "icons/icon-20.png",
+            "48": "icons/icon-48.png"
+        },
+        "default_popup":"popup.html"
+
+    },
+    "icons": {
+        "128": "icons/icon-128.png",
+        "48": "icons/icon-48.png"
+    },
+    "background":{
+        "page":"background.html"
+    }
+}

@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-width: 320px;
+    /*max-height: 500px;*/
+}
+
+/*player*/
+
+.player {
+    display: table;
+    padding-left: 3px;
+}
+
+.player .md-inline-element {
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0px;
+    overflow: hidden;
+}
+
+.player .md-inline-btn {
+    width: 1%;
+}
+
+.player .md-progress-control {
+    /*width: 100%;*/
+    padding-left: 2px;
+
+}
+
+.md-button-bd {
+    width: 2.8em;
+    min-height: 2.8em;
+    position: relative;
+}
+.md-inline-button {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    /* hide inner text */
+    line-height: 10em;
+    /**
+     * image-rendering seems to apply mostly to Firefox in this case. Use with caution.
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/image-rendering#Browser_compatibility
+     */
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor;
+    -ms-interpolation-mode: bicubic;
+    text-decoration: none;
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+
+.play-pause,
+.play-pause:hover,
+.paused .play-pause:hover {
+    background-image: url(../image/icomoon/entypo-25px-000000/PNG/play.png);
+    background-image: none, url(../image/icomoon/entypo-25px-000000/SVG/play.svg);
+    background-size: 67.5%;
+    background-position: 40% 53%;
+    /*text-indent:-9999em;*/
+}
+
+.playing .play-pause {
+    background-image: url(../image/icomoon/entypo-25px-000000/PNG/pause.png);
+    background-image: none, url(../image/icomoon/entypo-25px-000000/SVG/pause.svg);
+    background-size: 57.6%;
+    background-position: 50% 53%;
+}
+
+
+
+
+.md-table {
+    display: table;
+    width : 100%;
+}
+
+.md-row {
+    position: relative;
+    display: table-row;
+}
+
+.md-inline-time,
+.md-inline-duration {
+    display: table-cell;
+    width: 1%;
+    font-size: 75%;
+    line-height: 0.9em;
+    min-width: 2em; /* if you have sounds > 10:00 in length, make this bigger. */
+    vertical-align: middle;
+}
+
+.progress {
+    height: 3px;
+    /*margin-bottom: 0;*/
+    position: relative;
+    /*display: table-cell;*/
+    overflow: visible;
+    margin: 3px 8px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+/* disable bootstrap's progress bar transition */
+.progress>.progress-bar {
+    -webkit-transition: none;
+    transition: none;
+}
+
+.progress-ball {
+    height: 0.65em;
+    border-radius: 0.65em;
+    /*overflow: hidden;*/
+
+}
+
+.progress-ball {
+    position: absolute;
+    top: -3px;
+    left: 0px;
+    width: 1em;
+    height: 1em;
+    margin: -0.2em 0px 0px -0.5em;
+    width: 14px;
+    height: 14px;
+    margin: -2px 0px 0px -7px;
+    width: 0.9333em;
+    height: 0.9333em;
+    margin: -0.175em 0px 0px -0.466em;
+    /*background-color: #fff;*/
+    background-color: #555555;
+    padding: 0px;
+    /*z-index: 10;*/
+    -webkit-transition: -webkit-transform 0.15s ease-in-out;
+    transition: transform 0.15s ease-in-out;
+    /*float: left;*/
+}
+
+
+
+.progress-ball .icon-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: none, url(../image/icomoon/free-25px-ffffff/SVG/spinner.svg);
+    background-size: 72%;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    -webkit-animation: progress-spinner 1000ms linear infinite;
+    animation: progress-spinner 1000ms linear infinite;
+    display: none;
+}
+
+
+.playing.buffering .progress-ball .icon-overlay {
+    display: block;
+}
+
+.playing .md-progress-control .progress-ball {
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+    cursor: grab;
+}
+
+.playing.grabbing .md-progress-control .progress,
+.playing.grabbing .md-progress-control .progress-ball {
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+    cursor: grabbing;
+}
+.playing.grabbing .md-progress-control .progress-ball {
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15);
+}
+
+
+/*.sm2-bar-ui.grabbing .sm2-progress .sm2-progress-ball {
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15);
+}*/
+
+@-webkit-keyframes progress-spinner {
+    0%   { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes progress-spinner {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+/* ./player */
+
+.searchWords .input-group .form-control {
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.searchWords .input-group .btn,
+.md-play-btn
+{
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 4px;
+}
+
+
+li .dropdown-menu {
+    position: static;
+    top: initial;
+    margin: 0 5px !important;
+    float: none;
+}
+
+li.dropdown>a.disabled {
+    cursor: not-allowed;
+}
+
+
+
